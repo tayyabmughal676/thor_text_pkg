@@ -1,30 +1,40 @@
-
 # Thor Text Packages
-It is just simple text package return custom text.
+
+A simple Dart package that provides customizable text widgets for your Flutter applications.
 
 ## Authors
+
 - [@Thor](https://www.github.com/tayyabmughal676)
 
 ## Features
 
--
-
+- Custom text widgets for consistent styling
+- Easy integration into any Flutter project
 
 ## Getting started
 
--
+Add the package to your `pubspec.yaml`:
 
-## Usage
+```yaml
+dependencies:
+  thor_text_packages: ^latest_version
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
 ```
 
-## Additional information
+```
+dart pub get
+```
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```## Usage
+import 'package:thor_text_packages/thor_text_packages.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ThorText(
+      'Hello, Thor!',
+      style: TextStyle(fontSize: 20, color: Colors.blue),
+    );
+  }
+}
+```
