@@ -1,4 +1,4 @@
-library thor_text_pkg;
+library;
 
 import 'package:flutter/material.dart';
 
@@ -12,17 +12,17 @@ class ThorText extends StatelessWidget {
   final bool? softWrap;
   final double? fontSize;
 
-  const ThorText(
-      {Key? key,
-      required this.text,
-      this.textAlign = TextAlign.start,
-      this.color,
-      this.fontWeight,
-      this.maxLines,
-      this.fontFamily,
-      this.softWrap,
-      this.fontSize})
-      : super(key: key);
+  const ThorText({
+    super.key,
+    required this.text,
+    this.textAlign = TextAlign.start,
+    this.color,
+    this.fontWeight,
+    this.maxLines,
+    this.fontFamily,
+    this.softWrap,
+    this.fontSize,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -42,31 +42,31 @@ class ThorText extends StatelessWidget {
 }
 
 class ThorTextButton extends StatelessWidget {
-  final onPressed;
+  final VoidCallback onPressed;
   final Widget child;
   final ButtonStyle? style;
 
   const ThorTextButton({
-    Key? key,
+    super.key,
     required this.child,
     required this.onPressed,
     this.style,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      child: child,
       style: TextButton.styleFrom(
+        foregroundColor: Colors.white,
         padding: const EdgeInsets.all(16.0),
-        primary: Colors.white,
         backgroundColor: Colors.blue,
         elevation: 9.0,
         textStyle: const TextStyle(
           fontSize: 20,
         ),
       ),
+      child: child,
     );
   }
 }
