@@ -3,7 +3,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:thor_text_pkg/thor_text_pkg.dart';
 
 void main() {
-
   // test('adds one to input values', () {
   //
   //   final ThorText = ThorText();
